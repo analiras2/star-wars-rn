@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders App correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/res/img/space.jpg",
+      }
+    }
+    style={
+      Object {
+        "bottom": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+  />
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/res/img/logo.png",
+      }
+    }
+    style={
+      Object {
+        "height": 200,
+        "marginTop": 38,
+        "width": 280,
+      }
+    }
+  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#edb211",
+        "borderRadius": 8,
+        "height": 40,
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 150,
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "width": "90%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "auto",
+          "color": "#000",
+          "flex": 0,
+          "fontFamily": "DIN-Bold",
+          "fontSize": 18,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+          "textAlign": "center",
+        }
+      }
+    >
+      LIGAR MOTORES
+    </Text>
+  </View>
+</View>
+`;

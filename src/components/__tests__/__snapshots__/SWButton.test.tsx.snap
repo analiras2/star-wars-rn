@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SWButton renders SWButton correctly 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": undefined,
+      "borderRadius": 8,
+      "height": 40,
+      "justifyContent": "center",
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "width": "90%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "auto",
+        "color": "#000",
+        "flex": 0,
+        "fontFamily": "DIN-Bold",
+        "fontSize": 18,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "textAlign": "center",
+      }
+    }
+  >
+    STAR WARS
+  </Text>
+</View>
+`;
