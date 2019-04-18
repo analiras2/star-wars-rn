@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
-import { View } from "react-native";
-import styles from "../res/styles";
+import React, { PureComponent } from 'react';
+import { View } from 'react-native';
+import styles from '../res/styles';
 
 interface Props {
   children: Element;
@@ -8,19 +8,19 @@ interface Props {
   flex?: number;
   bgColor?: string;
   align?:
-    | "center"
-    | "flex-start"
-    | "flex-end"
-    | "stretch"
-    | "baseline"
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'stretch'
+    | 'baseline'
     | undefined;
   justify?:
-    | "center"
-    | "flex-start"
-    | "flex-end"
-    | "space-between"
-    | "space-around"
-    | "space-evenly"
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'space-between'
+    | 'space-around'
+    | 'space-evenly'
     | undefined;
   padding?: number;
   right?: number;
@@ -31,7 +31,7 @@ interface Props {
   bottom?: number;
 }
 export default class SWView extends PureComponent<Props> {
-  render() {
+  public render() {
     return (
       <View style={styles({ ...this.props }).swView}>
         {this.props.children}

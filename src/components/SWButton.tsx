@@ -1,12 +1,10 @@
-import React, { PureComponent } from "react";
-import { TouchableOpacity } from "react-native";
-import styles from "../res/styles";
-import { colors } from "../res/colors";
-import SWText from "./SWText";
+import React, { PureComponent } from 'react';
+import { TouchableOpacity } from 'react-native';
+import colors from '../res/colors';
+import styles from '../res/styles';
+import SWText from './SWText';
 
 interface Props {
-  title: string;
-  onPress(): void;
   color?: string;
   margin?: number;
   vertical?: number;
@@ -15,9 +13,11 @@ interface Props {
   bottom?: number;
   right?: number;
   left?: number;
+  title: string;
+  onPress(): void;
 }
 export default class SWButton extends PureComponent<Props> {
-  render() {
+  public render() {
     return (
       <TouchableOpacity
         activeOpacity={0.6}
@@ -27,8 +27,8 @@ export default class SWButton extends PureComponent<Props> {
           title={this.props.title.toUpperCase()}
           textAlign="center"
           color={colors.primary}
-          medium
-          bold
+          medium={true}
+          bold={true}
         />
       </TouchableOpacity>
     );

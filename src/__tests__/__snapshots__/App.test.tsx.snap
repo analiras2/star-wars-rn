@@ -5,7 +5,7 @@ exports[`App renders App correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "transparent",
+      "backgroundColor": "#000",
       "flex": 1,
       "flexDirection": "column",
       "justifyContent": "flex-start",
@@ -25,6 +25,7 @@ exports[`App renders App correctly 1`] = `
     style={
       Object {
         "bottom": 0,
+        "opacity": 0.6,
         "position": "absolute",
         "top": 0,
         "width": "100%",
@@ -87,7 +88,7 @@ exports[`App renders App correctly 1`] = `
         }
       }
     >
-      LIGAR MOTORES
+      LIGAR PROPULSORES
     </Text>
   </View>
 </View>

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SWView renders SWView correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "transparent",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+    }
+  }
+>
+  <Text>
+    Star Wars
+  </Text>
+</View>
+`;

@@ -1,11 +1,11 @@
-import { StyleSheet } from "react-native";
-import { colors } from "./colors";
+import { StyleSheet } from 'react-native';
+import colors from './colors';
 
 export default (props: any) =>
   StyleSheet.create({
     swButton: {
       height: 40,
-      width: "90%",
+      width: '90%',
       marginTop: props.margin
         ? props.margin
         : props.vertical
@@ -28,16 +28,16 @@ export default (props: any) =>
         : props.left || 0,
       borderRadius: 8,
       paddingHorizontal: 20,
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: props.color
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: props.color,
     },
     swView: {
-      flexDirection: props.row ? "row" : "column",
+      flexDirection: props.row ? 'row' : 'column',
       flex: props.flex || 0,
-      backgroundColor: props.bgColor || "transparent",
-      alignItems: props.align || "stretch",
-      justifyContent: props.justify || "flex-start",
+      backgroundColor: props.bgColor || 'transparent',
+      alignItems: props.align || 'stretch',
+      justifyContent: props.justify || 'flex-start',
       paddingRight: props.padding
         ? props.padding
         : props.right
@@ -65,11 +65,11 @@ export default (props: any) =>
         ? props.bottom
         : props.vertical
         ? props.vertical
-        : 0
+        : 0,
     },
     swText: {
       flex: props.flex || 0,
-      fontFamily: props.bold ? "DIN-Bold" : "DIN-Regular",
+      fontFamily: props.bold ? 'DIN-Bold' : 'DIN-Regular',
       marginTop: props.margin
         ? props.margin
         : props.vertical
@@ -93,8 +93,8 @@ export default (props: any) =>
       color: props.secondary
         ? colors.textSecondary
         : props.color || colors.textPrimary,
-      textAlign: props.textAlign || "auto",
-      alignSelf: props.align || "auto",
+      textAlign: props.textAlign || 'auto',
+      alignSelf: props.align || 'auto',
       fontSize: props.big
         ? 24
         : props.medium
@@ -107,6 +107,6 @@ export default (props: any) =>
         ? 10
         : props.size
         ? props.size
-        : 14
-    }
+        : 14,
+    },
   });

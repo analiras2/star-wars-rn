@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
-import { Text } from "react-native";
-import styles from "../res/styles";
+import React, { PureComponent } from 'react';
+import { Text } from 'react-native';
+import styles from '../res/styles';
 
 interface Props {
   title: string;
@@ -15,13 +15,13 @@ interface Props {
   left?: number;
   secondary?: boolean;
   color?: string;
-  textAlign?: "left" | "right" | "center" | "auto" | "justify";
+  textAlign?: 'left' | 'right' | 'center' | 'auto' | 'justify';
   align?:
-    | "center"
-    | "flex-start"
-    | "flex-end"
-    | "stretch"
-    | "baseline"
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'stretch'
+    | 'baseline'
     | undefined;
   big?: boolean;
   medium?: boolean;
@@ -31,7 +31,7 @@ interface Props {
   size?: number;
 }
 export default class SWText extends PureComponent<Props> {
-  render() {
+  public render() {
     return (
       <Text style={styles({ ...this.props }).swText}>{this.props.title}</Text>
     );
