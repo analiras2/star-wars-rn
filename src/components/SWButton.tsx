@@ -22,6 +22,7 @@ export default class SWButton extends PureComponent<Props> {
       <TouchableOpacity
         activeOpacity={0.6}
         style={styles({ ...this.props }).swButton}
+        onPress={this.props.onPress}
       >
         <SWText
           title={this.props.title.toUpperCase()}

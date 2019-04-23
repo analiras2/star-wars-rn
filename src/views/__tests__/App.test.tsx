@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { render } from 'react-native-testing-library';
 import renderer from 'react-test-renderer';
-import App from '../App';
+import App from '../../App';
 
 describe('App', () => {
   const wrapper = shallow<App>(<App />);
