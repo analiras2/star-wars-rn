@@ -2,11 +2,12 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { render } from 'react-native-testing-library';
 import renderer from 'react-test-renderer';
-import App from '../../App';
+import Dashboard from '../Dashboard';
 
 describe('App', () => {
-  const wrapper = shallow<App>(<App />);
-  const { getByText } = render(<App />);
+  const dashModule = <Dashboard navigation={true} />;
+  const wrapper = shallow<Dashboard>(dashModule);
+  const { getByText } = render(dashModule);
 
   describe('validating App texts', () => {
     it('should render a Ligar Motores', () => {
@@ -29,7 +30,7 @@ describe('App', () => {
   });
 
   it('renders App correctly', () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(dashModule).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
