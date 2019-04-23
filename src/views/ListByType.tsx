@@ -12,7 +12,7 @@ export default class ListByType extends Component {
           style={{ width: 280, height: 200, marginTop: 38 }}
           source={require('../res/img/logo.png')}
         />
-        <SWText big title="ListByType" />
+        <SWText title="ListByType" big={true} />
       </SWView>
     );
   }
