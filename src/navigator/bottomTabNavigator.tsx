@@ -1,10 +1,9 @@
 import React from 'react';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Movie from '../views/Movie';
-import Character from '../views/Character';
+import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import colors from '../res/colors';
-import SWView from '../components/SWView';
+import Character from '../views/Character';
+import Movie from '../views/Movie';
 
 const menuItem = (
   focused: boolean,
@@ -22,7 +21,7 @@ const menuItem = (
   );
 };
 
-const TabNavigator = createBottomTabNavigator(
+const tabNavigator = createBottomTabNavigator(
   {
     Character: {
       screen: Character,
@@ -57,4 +56,4 @@ const TabNavigator = createBottomTabNavigator(
   },
 );
 
-export default createAppContainer(TabNavigator);
+export default createAppContainer(tabNavigator);
