@@ -90,9 +90,7 @@ export default (props: any) =>
         : props.horizontal
         ? props.horizontal
         : props.left || 0,
-      color: props.secondary
-        ? colors.textSecondary
-        : props.color || colors.textPrimary,
+      color: props.color || colors.textPrimary,
       textAlign: props.textAlign || 'auto',
       alignSelf: props.align || 'auto',
       fontSize: props.big

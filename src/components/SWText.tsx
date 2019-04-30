@@ -13,7 +13,6 @@ interface Props {
   horizontal?: number;
   right?: number;
   left?: number;
-  secondary?: boolean;
   color?: string;
   textAlign?: 'left' | 'right' | 'center' | 'auto' | 'justify';
   align?:

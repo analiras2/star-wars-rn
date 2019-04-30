@@ -17,7 +17,7 @@ interface Props {
 }
 export default class Main extends Component<Props> {
   public componentWillMount(): void {
-    setTimeout(() => this.props.navigation.dispatch(resetAction), 3000);
+    setTimeout(() => this.props.navigation.dispatch(resetAction), 300);
   }
 
   public render() {
