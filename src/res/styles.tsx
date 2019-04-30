@@ -93,6 +93,7 @@ export default (props: any) =>
       color: props.color || colors.textPrimary,
       textAlign: props.textAlign || 'auto',
       alignSelf: props.align || 'auto',
+      letterSpacing: props.spacing || 0,
       fontSize: props.big
         ? 24
         : props.medium

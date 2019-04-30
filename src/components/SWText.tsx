@@ -28,6 +28,7 @@ interface Props {
   small?: boolean;
   tiny?: boolean;
   size?: number;
+  spacing?: number;
 }
 export default class SWText extends PureComponent<Props> {
   public render() {
