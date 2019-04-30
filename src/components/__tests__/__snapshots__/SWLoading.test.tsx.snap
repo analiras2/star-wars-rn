@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SWLoading renders SWLoading correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "transparent",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#FFE81F"
+    hidesWhenStopped={true}
+    size={64}
+  />
+  <Text
+    style={
+      Object {
+        "alignSelf": "auto",
+        "color": "#FFE81F",
+        "flex": 0,
+        "fontFamily": "Exo-Regular",
+        "fontSize": 12,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "textAlign": "center",
+      }
+    }
+  >
+    LOADING
+  </Text>
+</View>
+`;

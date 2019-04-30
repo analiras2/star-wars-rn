@@ -1,7 +1,7 @@
 const black = '#000';
 const white = '#fff';
 const grayDD = '#DDDDDD';
-const orange = '#edb211';
+const orange = '#FFE81F';
 
 export default Object.freeze({
   primary: black,

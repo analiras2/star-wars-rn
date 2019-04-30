@@ -7,7 +7,7 @@ exports[`SWText renders SWText correctly 1`] = `
       "alignSelf": "auto",
       "color": "#fff",
       "flex": 0,
-      "fontFamily": "DIN-Regular",
+      "fontFamily": "Exo-Regular",
       "fontSize": 14,
       "marginBottom": 0,
       "marginLeft": 0,

@@ -1,15 +1,15 @@
 import { createStackNavigator } from 'react-navigation';
 import Dashboard from '../views/Dashboard';
-import ListByType from '../views/ListByType';
+import Main from '../views/Main';
 import helper from './navigatorHelper';
 
 export default createStackNavigator(
   {
+    Main,
     Dashboard,
-    ListByType,
   },
   {
-    initialRouteName: helper.dash,
+    initialRouteName: helper.main,
     defaultNavigationOptions: {
       header: null,
     },

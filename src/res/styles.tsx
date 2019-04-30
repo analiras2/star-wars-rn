@@ -69,7 +69,7 @@ export default (props: any) =>
     },
     swText: {
       flex: props.flex || 0,
-      fontFamily: props.bold ? 'DIN-Bold' : 'DIN-Regular',
+      fontFamily: props.bold ? 'Exo-Bold' : 'Exo-Regular',
       marginTop: props.margin
         ? props.margin
         : props.vertical
