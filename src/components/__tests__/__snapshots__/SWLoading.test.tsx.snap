@@ -30,6 +30,7 @@ exports[`SWLoading renders SWLoading correctly 1`] = `
         "flex": 0,
         "fontFamily": "Exo-Regular",
         "fontSize": 12,
+        "letterSpacing": 0,
         "marginBottom": 0,
         "marginLeft": 0,
         "marginRight": 0,
