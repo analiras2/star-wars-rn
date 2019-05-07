@@ -6,6 +6,7 @@ import SWView from '../components/SWView';
 import GlobalStorage from '../data/GlobalStorage';
 import Person from '../models/Person';
 import constants from '../utils/constants';
+import { peopleAvatar } from '../utils/pictures';
 
 const NUM_COLUMNS = 2;
 
@@ -29,14 +30,15 @@ export default function character() {
   }, []);
 
   const renderListItem = (item: Person) => {
+    const avatar = {
+      uri: peopleAvatar[item.name],
+    };
+
     return (
       <View style={styles.container}>
         <Image
           style={styles.avatar}
-          source={{
-            uri:
-              'https://cdn1.newsplex.pt/media/2018/12/4/668548.jpg?type=artigo',
-          }}
+          source={avatar.uri ? avatar : require('../res/img/placeholder.png')}
         />
         <SWText key={item.id} title={item.name} top={4} bold={true} />
       </View>

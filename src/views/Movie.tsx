@@ -7,15 +7,18 @@ import GlobalStorage from '../data/GlobalStorage';
 import Movie from '../models/Movie';
 import colors from '../res/colors';
 import constants from '../utils/constants';
+import { moviePoster } from '../utils/pictures';
 
 const NUM_COLUMNS = 2;
 
 const styles = StyleSheet.create({
   container: {
+    height: 264,
     width: (Dimensions.get('window').width - 40) / NUM_COLUMNS,
     alignItems: 'center',
-    borderBottomRightRadius: 6,
-    borderBottomLeftRadius: 6,
+    marginTop: 16,
+    marginBottom: 8,
+    borderRadius: 6,
   },
   title: {
     width: 140,
@@ -25,6 +28,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.secondary,
     borderBottomRightRadius: 6,
     borderBottomLeftRadius: 6,
+  },
+  poster: {
+    height: 212,
+    width: 140,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
   },
 });
 
@@ -39,14 +48,15 @@ export default function character() {
   }, []);
 
   const renderListItem = (item: Movie) => {
+    const poster = {
+      uri: moviePoster[item.title],
+    };
+
     return (
       <View style={styles.container}>
         <Image
-          style={{ height: 212, width: 140 }}
-          source={{
-            uri:
-              'http://img3.wikia.nocookie.net/__cb20150429011457/starwars/images/8/84/SpecialEditionPoster.jpg',
-          }}
+          style={styles.poster}
+          source={poster.uri ? poster : require('../res/img/movie.jpg')}
         />
         <View style={styles.title}>
           <SWText
