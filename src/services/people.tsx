@@ -4,7 +4,7 @@ import constants from '../utils/constants';
 import { getIdFromUrl, getNextPage } from '../utils/helper';
 import api from './api';
 
-export default () => {
+export default (nextRequest: () => void) => {
   const personDB = new GlobalStorage(constants.PEOPLE_KEY);
   let people: Person[] = [];
 
@@ -15,10 +15,14 @@ export default () => {
         name: item.name,
         gender: item.gender,
         birthYear: item.birth_year,
+        homeworld: getIdFromUrl(item.homeworld),
+        specie: item.species.map((specie: string) => getIdFromUrl(specie)),
+        moveis: item.films.map((movie: string) => getIdFromUrl(movie)),
       }));
       people = people.concat(peopleResp);
       personDB.saveItems(people);
       if (data.next) getPeople(getNextPage(data.next));
+      else nextRequest();
     });
   };
 

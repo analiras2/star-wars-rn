@@ -3,4 +3,7 @@ export default interface Person {
   name: string;
   gender: string;
   birthYear: string;
+  homeworld: string;
+  species: string[];
+  movies: string[];
 }

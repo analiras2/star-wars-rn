@@ -4,7 +4,7 @@ import constants from '../utils/constants';
 import { getIdFromUrl, getNextPage } from '../utils/helper';
 import api from './api';
 
-export default () => {
+export default (nextRequest: () => void) => {
   const specieDB = new GlobalStorage(constants.SPECIES_KEY);
   let species: Specie[] = [];
 
@@ -17,6 +17,7 @@ export default () => {
       species = species.concat(speciesResp);
       specieDB.saveItems(species);
       if (data.next) getSpecies(getNextPage(data.next));
+      else nextRequest();
     });
   };
 

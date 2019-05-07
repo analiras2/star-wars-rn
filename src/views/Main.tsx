@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, StatusBar } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
 import SWLoading from '../components/SWLoading';
 import SWView from '../components/SWView';
+import GlobalStorage from '../data/GlobalStorage';
 import navigatorHelper from '../navigator/navigatorHelper';
 import colors from '../res/colors';
 import getAllMovies from '../services/movies';
 import getAllPeople from '../services/people';
 import getAllPlanets from '../services/planets';
 import getAllSpecies from '../services/species';
+import constants from '../utils/constants';
 
 const resetAction = StackActions.reset({
   index: 0,
@@ -19,19 +21,38 @@ const resetAction = StackActions.reset({
 interface Props {
   navigation: any;
 }
-
 export default function main(props: Props) {
+  const [loadingMsg, setLoadingMsg] = useState('Loading people...');
+
   useEffect(() => {
-    getAllPeople();
-    getAllSpecies();
-    getAllMovies();
-    getAllPlanets(goToDash);
+    new GlobalStorage(constants.PEOPLE_KEY).getItems().then(people => {
+      if (people) goToDash();
+      else getPeople();
+    });
     // tslint:disable-next-line: align
   }, []);
 
+  const getPeople = () => {
+    getAllPeople(getSpecies);
+  };
+
+  const getSpecies = () => {
+    setLoadingMsg('Loading species...');
+    getAllSpecies(getMovies);
+  };
+
+  const getMovies = () => {
+    setLoadingMsg('Loading movies...');
+    getAllMovies(getPlanets);
+  };
+
+  const getPlanets = () => {
+    setLoadingMsg('Loading planets...');
+    getAllPlanets(goToDash);
+  };
+
   const goToDash = () => {
-    // props.navigation.dispatch(resetAction)
-    console.log('Chamou');
+    props.navigation.dispatch(resetAction);
   };
 
   return (
@@ -45,7 +66,7 @@ export default function main(props: Props) {
         style={{ width: 300, height: 200, marginTop: 38, marginBottom: 88 }}
         source={require('../res/img/logo.png')}
       />
-      <SWLoading title="Loading..." />
+      <SWLoading title={loadingMsg} />
     </SWView>
   );
 }

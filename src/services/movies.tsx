@@ -4,7 +4,7 @@ import constants from '../utils/constants';
 import { getIdFromUrl, getNextPage } from '../utils/helper';
 import api from './api';
 
-export default () => {
+export default (nextRequest: () => void) => {
   const movieDB = new GlobalStorage(constants.MOVIES_KEY);
   let movies: Movie[] = [];
 
@@ -21,6 +21,7 @@ export default () => {
       movies = movies.concat(moviesResp);
       movieDB.saveItems(movies);
       if (data.next) getMovies(getNextPage(data.next));
+      else nextRequest();
     });
   };
 
