@@ -29,7 +29,6 @@ interface Props {
   top?: number;
   vertical?: number;
   bottom?: number;
-  width?: number;
 }
 export default class SWView extends PureComponent<Props> {
   public render() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, Image } from 'react-native';
+import { Dimensions, FlatList, Image, StyleSheet, View } from 'react-native';
 import Background from '../components/Background';
 import SWText from '../components/SWText';
 import SWView from '../components/SWView';
@@ -7,9 +7,19 @@ import GlobalStorage from '../data/GlobalStorage';
 import Person from '../models/Person';
 import constants from '../utils/constants';
 
+const NUM_COLUMNS = 2;
+
+const styles = StyleSheet.create({
+  container: {
+    width: (Dimensions.get('window').width - 40) / NUM_COLUMNS,
+    alignItems: 'center',
+    marginVertical: 8,
+  },
+  avatar: { width: 140, height: 140, borderRadius: 75 },
+});
+
 export default function character() {
   const [people, setPeople] = useState<Person[]>([]);
-  const numColumns = 2;
 
   useEffect(() => {
     new GlobalStorage(constants.PEOPLE_KEY).getItems().then(data => {
@@ -20,16 +30,16 @@ export default function character() {
 
   const renderListItem = (item: Person) => {
     return (
-      <SWView align="center" justify="center" flex={1}>
+      <View style={styles.container}>
         <Image
-          style={{ width: 140, height: 140, borderRadius: 75 }}
+          style={styles.avatar}
           source={{
             uri:
               'https://cdn1.newsplex.pt/media/2018/12/4/668548.jpg?type=artigo',
           }}
         />
-        <SWText key={item.id} flex={1} title={item.name} top={4} bold={true} />
-      </SWView>
+        <SWText key={item.id} title={item.name} top={4} bold={true} />
+      </View>
     );
   };
 
@@ -39,7 +49,7 @@ export default function character() {
         <SWText title="Character" big={true} bold={true} />
         <FlatList
           data={people}
-          numColumns={numColumns}
+          numColumns={NUM_COLUMNS}
           keyExtractor={item => item.id}
           renderItem={({ item }) => renderListItem(item)}
         />
