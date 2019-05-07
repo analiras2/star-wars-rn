@@ -6,6 +6,7 @@ import SWView from '../components/SWView';
 import GlobalStorage from '../data/GlobalStorage';
 import navigatorHelper from '../navigator/navigatorHelper';
 import colors from '../res/colors';
+import strings from '../res/strings';
 import getAllMovies from '../services/movies';
 import getAllPeople from '../services/people';
 import getAllPlanets from '../services/planets';
@@ -22,7 +23,7 @@ interface Props {
   navigation: any;
 }
 export default function main(props: Props) {
-  const [loadingMsg, setLoadingMsg] = useState('Loading people...');
+  const [loadingMsg, setLoadingMsg] = useState<string>(strings.loading.people);
 
   useEffect(() => {
     new GlobalStorage(constants.PEOPLE_KEY).getItems().then(people => {
@@ -37,17 +38,17 @@ export default function main(props: Props) {
   };
 
   const getSpecies = () => {
-    setLoadingMsg('Loading species...');
+    setLoadingMsg(strings.loading.species);
     getAllSpecies(getMovies);
   };
 
   const getMovies = () => {
-    setLoadingMsg('Loading movies...');
+    setLoadingMsg(strings.loading.movies);
     getAllMovies(getPlanets);
   };
 
   const getPlanets = () => {
-    setLoadingMsg('Loading planets...');
+    setLoadingMsg(strings.loading.planets);
     getAllPlanets(goToDash);
   };
 
