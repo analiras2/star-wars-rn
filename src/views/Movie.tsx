@@ -4,9 +4,9 @@ import Background from '../components/Background';
 import SWText from '../components/SWText';
 import SWView from '../components/SWView';
 import GlobalStorage from '../data/GlobalStorage';
+import { KEYS } from '../data/keys';
 import Movie from '../models/Movie';
 import colors from '../res/colors';
-import constants from '../utils/constants';
 import { moviePoster } from '../utils/pictures';
 
 const NUM_COLUMNS = 2;
@@ -41,7 +41,7 @@ export default function character() {
   const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
-    new GlobalStorage(constants.MOVIES_KEY).getItems().then(data => {
+    new GlobalStorage(KEYS.MOVIES_KEY).getItems().then(data => {
       if (data) setMovies(JSON.parse(data));
     });
     // tslint:disable-next-line: align
@@ -63,7 +63,7 @@ export default function character() {
             key={item.id}
             title={item.title}
             top={4}
-            bold={true}
+            bold
             color={colors.primary}
             textAlign="center"
           />
@@ -75,7 +75,7 @@ export default function character() {
   return (
     <Background>
       <SWView bottom={98}>
-        <SWText title="Movies" big={true} bold={true} />
+        <SWText title="Movies" big bold />
         <FlatList
           data={movies}
           numColumns={NUM_COLUMNS}

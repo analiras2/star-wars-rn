@@ -1,12 +1,11 @@
-import { AppState } from 'react-native';
 import GlobalStorage from '../data/GlobalStorage';
+import { KEYS } from '../data/keys';
 import Planet from '../models/Planet';
-import constants from '../utils/constants';
 import { getNextPage } from '../utils/helper';
 import api from './api';
 
 export default (goToNewScreen: () => void) => {
-  const planetDB = new GlobalStorage(constants.PLANETS_KEY);
+  const planetDB = new GlobalStorage(KEYS.PLANETS_KEY);
   let planets: Planet[] = [];
 
   const getPlanets = (page: number) => {

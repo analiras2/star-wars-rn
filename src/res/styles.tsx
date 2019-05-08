@@ -98,12 +98,8 @@ export default (props: any) =>
         ? 24
         : props.medium
         ? 18
-        : props.normal
-        ? 16
         : props.small
         ? 12
-        : props.tiny
-        ? 10
         : props.size
         ? props.size
         : 14,

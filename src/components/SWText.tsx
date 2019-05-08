@@ -23,10 +23,8 @@ interface Props {
     | 'baseline'
     | undefined;
   big?: boolean;
-  medium?: boolean;
-  normal?: boolean;
   small?: boolean;
-  tiny?: boolean;
+  medium?: boolean;
   size?: number;
   spacing?: number;
 }

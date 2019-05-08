@@ -16,7 +16,7 @@ export default class SWLoading extends PureComponent<Props> {
           title={this.props.title.toUpperCase()}
           textAlign="center"
           color={colors.accent}
-          small={true}
+          small
         />
       </SWView>
     );

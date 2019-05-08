@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import colors from '../res/colors';
-import Character from '../views/Character';
+import Character from '../views/character/Character';
 import Movie from '../views/Movie';
 
 const menuItem = (
@@ -16,7 +16,7 @@ const menuItem = (
       style={{ marginTop: 8 }}
       name={icon}
       color={tintColor}
-      size={focused ? 24 : 18}
+      size={focused ? 24 : 16}
     />
   );
 };

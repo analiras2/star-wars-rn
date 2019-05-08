@@ -1,11 +1,11 @@
 import GlobalStorage from '../data/GlobalStorage';
+import { KEYS } from '../data/keys';
 import Person from '../models/Person';
-import constants from '../utils/constants';
 import { getIdFromUrl, getNextPage } from '../utils/helper';
 import api from './api';
 
 export default (nextRequest: () => void) => {
-  const personDB = new GlobalStorage(constants.PEOPLE_KEY);
+  const personDB = new GlobalStorage(KEYS.PEOPLE_KEY);
   let people: Person[] = [];
 
   const getPeople = (page: number) => {
@@ -16,7 +16,7 @@ export default (nextRequest: () => void) => {
         gender: item.gender,
         birthYear: item.birth_year,
         homeworld: getIdFromUrl(item.homeworld),
-        specie: item.species.map((specie: string) => getIdFromUrl(specie)),
+        specy: item.species.map((specy: string) => getIdFromUrl(specy)),
         moveis: item.films.map((movie: string) => getIdFromUrl(movie)),
       }));
       people = people.concat(peopleResp);

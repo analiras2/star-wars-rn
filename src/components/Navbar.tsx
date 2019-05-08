@@ -1,34 +1,51 @@
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../res/colors';
 import strings from '../res/strings';
 import SWText from './SWText';
 
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    width: '100%',
+    height: 52,
+    alignItems: 'center',
+    borderBottomColor: colors.divider,
+    borderBottomWidth: 1,
+  },
+  icon: { marginLeft: 16, width: 52, height: 52, justifyContent: 'center' },
+});
+
 interface Props {
   title?: string;
+  onBackPress?: () => void;
 }
 export default class Navbar extends PureComponent<Props> {
   public render() {
-    const { title } = this.props;
+    const { title, onBackPress } = this.props;
 
     return (
-      <View
-        style={{
-          width: '100%',
-          height: 52,
-          justifyContent: 'center',
-          borderBottomColor: colors.divider,
-          borderBottomWidth: 1,
-        }}
-      >
+      <View style={styles.container}>
+        {onBackPress && (
+          <TouchableOpacity
+            style={styles.icon}
+            activeOpacity={0.6}
+            onPress={onBackPress}
+          >
+            <Icon name="md-arrow-back" color={colors.secondary} size={24} />
+          </TouchableOpacity>
+        )}
         <SWText
+          flex={1}
           title={title ? title.toUpperCase() : strings.appName.toUpperCase()}
           textAlign="center"
           color={colors.accent}
-          medium={true}
-          bold={true}
+          medium
+          bold
           spacing={2}
         />
+        {onBackPress && <View style={styles.icon} />}
       </View>
     );
   }

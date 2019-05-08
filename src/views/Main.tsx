@@ -4,20 +4,18 @@ import { NavigationActions, StackActions } from 'react-navigation';
 import SWLoading from '../components/SWLoading';
 import SWView from '../components/SWView';
 import GlobalStorage from '../data/GlobalStorage';
-import navigatorHelper from '../navigator/navigatorHelper';
+import { KEYS } from '../data/keys';
+import { ROUTES } from '../navigator/routes';
 import colors from '../res/colors';
 import strings from '../res/strings';
 import getAllMovies from '../services/movies';
 import getAllPeople from '../services/people';
 import getAllPlanets from '../services/planets';
 import getAllSpecies from '../services/species';
-import constants from '../utils/constants';
 
 const resetAction = StackActions.reset({
   index: 0,
-  actions: [
-    NavigationActions.navigate({ routeName: navigatorHelper.dashboard }),
-  ],
+  actions: [NavigationActions.navigate({ routeName: ROUTES.DASH })],
 });
 interface Props {
   navigation: any;
@@ -26,16 +24,14 @@ export default function main(props: Props) {
   const [loadingMsg, setLoadingMsg] = useState<string>(strings.loading.people);
 
   useEffect(() => {
-    new GlobalStorage(constants.PEOPLE_KEY).getItems().then(people => {
+    new GlobalStorage(KEYS.PEOPLE_KEY).getItems().then(people => {
       if (people) goToDash();
       else getPeople();
     });
     // tslint:disable-next-line: align
   }, []);
 
-  const getPeople = () => {
-    getAllPeople(getSpecies);
-  };
+  const getPeople = () => getAllPeople(getSpecies);
 
   const getSpecies = () => {
     setLoadingMsg(strings.loading.species);
@@ -52,14 +48,12 @@ export default function main(props: Props) {
     getAllPlanets(goToDash);
   };
 
-  const goToDash = () => {
-    props.navigation.dispatch(resetAction);
-  };
+  const goToDash = () => props.navigation.dispatch(resetAction);
 
   return (
     <SWView bgColor={colors.background} flex={1} align="center">
       <StatusBar
-        animated={true}
+        animated
         backgroundColor={colors.primary}
         barStyle="light-content"
       />

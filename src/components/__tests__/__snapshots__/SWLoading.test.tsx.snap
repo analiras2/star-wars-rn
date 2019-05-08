@@ -17,9 +17,9 @@ exports[`SWLoading renders SWLoading correctly 1`] = `
   }
 >
   <ActivityIndicator
-    animating={true}
+    animating
     color="#FFE81F"
-    hidesWhenStopped={true}
+    hidesWhenStopped
     size={64}
   />
   <Text

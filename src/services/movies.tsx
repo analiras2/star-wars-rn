@@ -1,11 +1,11 @@
 import GlobalStorage from '../data/GlobalStorage';
+import { KEYS } from '../data/keys';
 import Movie from '../models/Movie';
-import constants from '../utils/constants';
 import { getIdFromUrl, getNextPage } from '../utils/helper';
 import api from './api';
 
 export default (nextRequest: () => void) => {
-  const movieDB = new GlobalStorage(constants.MOVIES_KEY);
+  const movieDB = new GlobalStorage(KEYS.MOVIES_KEY);
   let movies: Movie[] = [];
 
   const getMovies = (page: number) => {

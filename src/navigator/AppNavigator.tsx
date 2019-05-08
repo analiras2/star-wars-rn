@@ -1,17 +1,19 @@
 import { createStackNavigator } from 'react-navigation';
+import CharacterDetails from '../views/character/CharacterDetails';
 import Main from '../views/Main';
 import TabNavigator from './bottomTabNavigator';
-import helper from './navigatorHelper';
+import { ROUTES } from './routes';
 
 export default createStackNavigator(
   {
     Main,
+    CharacterDetails,
     Dashboard: {
       screen: TabNavigator,
     },
   },
   {
-    initialRouteName: helper.main,
+    initialRouteName: ROUTES.MAIN,
     defaultNavigationOptions: {
       header: null,
     },
