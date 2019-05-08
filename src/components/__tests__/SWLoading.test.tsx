@@ -5,13 +5,13 @@ import renderer from 'react-test-renderer';
 import SWLoading from '../SWLoading';
 
 describe('SWLoading', () => {
-  const props = { title: 'Loading' };
+  const props = { title: 'Loading ...' };
   const wrapper = shallow(<SWLoading {...props} />);
   const { getByText } = render(<SWLoading {...props} />);
 
   describe('validating SWLoading texts', () => {
     it('should render Loading', () => {
-      expect(getByText(/Loading/i)).toBeDefined();
+      expect(getByText(/Loading .../i)).toBeDefined();
     });
   });
 
