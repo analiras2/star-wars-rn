@@ -3,7 +3,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import colors from '../res/colors';
 import Character from '../views/character/Character';
-import Movie from '../views/Movie';
+import Movie from '../views/movie/Movie';
 
 const menuItem = (
   focused: boolean,

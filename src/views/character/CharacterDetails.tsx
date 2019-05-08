@@ -11,7 +11,7 @@ import { peopleAvatar } from '../../utils/pictures';
 import MovieListItem from './movieListItem';
 
 const styles = StyleSheet.create({
-  container: { height: Dimensions.get('window').height - 80 },
+  container: { height: Dimensions.get('window').height - 100 },
   img: { height: 187 },
   divider: { backgroundColor: colors.accent, height: 1 },
   divider2: { backgroundColor: colors.accent, height: 1, marginTop: 4 },
@@ -54,7 +54,7 @@ export default function characterDetails(props: Props) {
         <View style={styles.divider} />
         <View style={styles.divider2} />
         <ScrollView>
-          <SWView top={20}>
+          <SWView vertical={20}>
             <SWView horizontal={20} justify="space-between" row>
               <DataField title="Bith Year" value={person.birthYear} />
               <DataField title="Gender" value={person.gender} />
