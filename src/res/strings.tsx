@@ -6,4 +6,18 @@ export default Object.freeze({
     movies: 'Loading movies...',
     planets: 'Loading planets...',
   },
+  movie: {
+    label: 'Movies',
+    director: 'Director',
+    producer: 'Producer',
+    releaseDateer: 'Release Dateer',
+  },
+  person: {
+    label: 'Character',
+    bithYear: 'Bith Year',
+    gender: 'Gender',
+    specy: 'Specy',
+    homeworld: 'Homeworld',
+    films: 'Films',
+  },
 });

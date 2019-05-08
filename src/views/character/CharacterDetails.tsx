@@ -7,6 +7,7 @@ import SWView from '../../components/SWView';
 import Movie from '../../models/Movie';
 import Person from '../../models/Person';
 import colors from '../../res/colors';
+import strings from '../../res/strings';
 import { peopleAvatar } from '../../utils/pictures';
 import MovieListItem from './movieListItem';
 
@@ -56,15 +57,23 @@ export default function characterDetails(props: Props) {
         <ScrollView>
           <SWView vertical={20}>
             <SWView horizontal={20} justify="space-between" row>
-              <DataField title="Bith Year" value={person.birthYear} />
-              <DataField title="Gender" value={person.gender} />
+              <DataField
+                title={strings.person.bithYear}
+                value={person.birthYear}
+              />
+              <DataField title={strings.person.gender} value={person.gender} />
             </SWView>
             <SWView horizontal={20} justify="space-between" top={20} row>
-              <DataField title="Specy" value={species} />
-              <DataField title="Homeworld" value={homeworld} />
+              <DataField title={strings.person.specy} value={species} />
+              <DataField title={strings.person.homeworld} value={homeworld} />
             </SWView>
           </SWView>
-          <SWText left={20} title="Films" color={colors.accent} bold />
+          <SWText
+            left={20}
+            title={strings.person.films}
+            color={colors.accent}
+            bold
+          />
           {movies.map((item: Movie) => MovieListItem(item, props.navigation))}
         </ScrollView>
       </View>

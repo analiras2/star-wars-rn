@@ -6,6 +6,7 @@ import SWView from '../../components/SWView';
 import GlobalStorage from '../../data/GlobalStorage';
 import { KEYS } from '../../data/keys';
 import Person from '../../models/Person';
+import strings from '../../res/strings';
 import ListItem from './listItem';
 
 const NUM_COLUMNS = 2;
@@ -26,7 +27,7 @@ export default function character(props: Props) {
   return (
     <Background>
       <SWView bottom={98}>
-        <SWText title="Character" big bold />
+        <SWText title={strings.person.label} big bold />
         <FlatList
           data={people}
           numColumns={NUM_COLUMNS}

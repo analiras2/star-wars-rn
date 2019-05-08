@@ -5,7 +5,7 @@ import DataField from '../../components/DataField';
 import SWText from '../../components/SWText';
 import SWView from '../../components/SWView';
 import Movie from '../../models/Movie';
-import colors from '../../res/colors';
+import strings from '../../res/strings';
 import { moviePoster } from '../../utils/pictures';
 
 const styles = StyleSheet.create({
@@ -41,9 +41,18 @@ export default function movieDetails(props: Props) {
               source={poster.uri ? poster : require('../../res/img/movie.jpg')}
             />
             <SWView left={12}>
-              <DataField title="Director" value={movie.director} />
-              <DataField title="Producer" value={movie.producer} />
-              <DataField title="Release Dateer" value={movie.releaseDate} />
+              <DataField
+                title={strings.movie.director}
+                value={movie.director}
+              />
+              <DataField
+                title={strings.movie.producer}
+                value={movie.producer}
+              />
+              <DataField
+                title={strings.movie.releaseDateer}
+                value={movie.releaseDate}
+              />
             </SWView>
           </SWView>
           <SWText left={20} title={movie.openingCrawl} />
