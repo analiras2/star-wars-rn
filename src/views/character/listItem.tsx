@@ -24,7 +24,11 @@ export default (person: Person, navigation: any, numColumns: number) => {
     <TouchableOpacity
       style={styles(numColumns).container}
       activeOpacity={0.6}
-      onPress={() => navigation.navigate(ROUTES.CHARACTER_DETAILS, { person })}
+      onPress={() =>
+        navigation.navigate(ROUTES.CHARACTER_DETAILS, {
+          person: new Person(person),
+        })
+      }
     >
       <Image
         style={styles(numColumns).avatar}

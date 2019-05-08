@@ -16,8 +16,8 @@ export default (nextRequest: () => void) => {
         gender: item.gender,
         birthYear: item.birth_year,
         homeworld: getIdFromUrl(item.homeworld),
-        specy: item.species.map((specy: string) => getIdFromUrl(specy)),
-        moveis: item.films.map((movie: string) => getIdFromUrl(movie)),
+        species: item.species.map((specy: string) => getIdFromUrl(specy)),
+        movies: item.films.map((movie: string) => getIdFromUrl(movie)),
       }));
       people = people.concat(peopleResp);
       personDB.saveItems(people);

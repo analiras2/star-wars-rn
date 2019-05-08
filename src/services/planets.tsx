@@ -1,7 +1,7 @@
 import GlobalStorage from '../data/GlobalStorage';
 import { KEYS } from '../data/keys';
 import Planet from '../models/Planet';
-import { getNextPage } from '../utils/helper';
+import { getIdFromUrl, getNextPage } from '../utils/helper';
 import api from './api';
 
 export default (goToNewScreen: () => void) => {
@@ -9,10 +9,9 @@ export default (goToNewScreen: () => void) => {
   let planets: Planet[] = [];
 
   const getPlanets = (page: number) => {
-    console.log('REQUEST');
     return api.getPlanets(page).then(({ data }) => {
       const planetsResp: Planet[] = data.results.map((item: any) => ({
-        id: item.name,
+        id: getIdFromUrl(item.url),
         name: item.name,
       }));
       planets = planets.concat(planetsResp);
