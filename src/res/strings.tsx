@@ -14,7 +14,7 @@ export default Object.freeze({
   },
   person: {
     label: 'Character',
-    bithYear: 'Bith Year',
+    birthYear: 'Bith Year',
     gender: 'Gender',
     specy: 'Specy',
     homeworld: 'Homeworld',

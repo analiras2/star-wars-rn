@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
 export default (movie: Movie, navigation: any) => {
   return (
     <TouchableOpacity
+        key={movie.id}
       style={styles.container}
       activeOpacity={0.6}
       onPress={() =>

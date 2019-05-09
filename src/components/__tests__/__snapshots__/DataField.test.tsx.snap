@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataField renders SWText correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "transparent",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "auto",
+        "color": "#fff",
+        "flex": 0,
+        "fontFamily": "Exo-Regular",
+        "fontSize": 12,
+        "letterSpacing": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "textAlign": "auto",
+      }
+    }
+  >
+    My Title
+  </Text>
+  <Text
+    style={
+      Object {
+        "alignSelf": "auto",
+        "color": "#fff",
+        "flex": 0,
+        "fontFamily": "Exo-Bold",
+        "fontSize": 14,
+        "letterSpacing": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "textAlign": "auto",
+      }
+    }
+  >
+    Star Wars App
+  </Text>
+</View>
+`;

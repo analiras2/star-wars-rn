@@ -23,7 +23,7 @@ interface Props {
 }
 export default class Navbar extends PureComponent<Props> {
   public render() {
-    const { title, onBackPress } = this.props;
+    const { title = strings.appName, onBackPress } = this.props;
 
     return (
       <View style={styles.container}>
@@ -38,7 +38,7 @@ export default class Navbar extends PureComponent<Props> {
         )}
         <SWText
           flex={1}
-          title={title ? title.toUpperCase() : strings.appName.toUpperCase()}
+          title={title.toUpperCase()}
           textAlign="center"
           color={colors.accent}
           medium

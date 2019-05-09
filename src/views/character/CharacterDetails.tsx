@@ -58,7 +58,7 @@ export default function characterDetails(props: Props) {
           <SWView vertical={20}>
             <SWView horizontal={20} justify="space-between" row>
               <DataField
-                title={strings.person.bithYear}
+                title={strings.person.birthYear}
                 value={person.birthYear}
               />
               <DataField title={strings.person.gender} value={person.gender} />

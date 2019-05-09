@@ -7,6 +7,7 @@ import SWView from '../../components/SWView';
 import Movie from '../../models/Movie';
 import strings from '../../res/strings';
 import { moviePoster } from '../../utils/pictures';
+import {dateFormat} from "../../utils/helper";
 
 const styles = StyleSheet.create({
   container: { height: Dimensions.get('window').height - 100 },
@@ -51,7 +52,7 @@ export default function movieDetails(props: Props) {
               />
               <DataField
                 title={strings.movie.releaseDateer}
-                value={movie.releaseDate}
+                value={dateFormat(movie.releaseDate)}
               />
             </SWView>
           </SWView>

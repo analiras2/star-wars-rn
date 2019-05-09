@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Background renders SWText correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "rgba(255,232,31, 0.5)",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "height": 52,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "auto",
+          "color": "#FFE81F",
+          "flex": 1,
+          "fontFamily": "Exo-Bold",
+          "fontSize": 18,
+          "letterSpacing": 2,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+          "textAlign": "center",
+        }
+      }
+    >
+      STAR WARS APP
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "transparent",
+        "flex": 0,
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "paddingBottom": 20,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "backgroundColor": "transparent",
+          "flex": 0,
+          "flexDirection": "column",
+          "justifyContent": "flex-start",
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+        }
+      }
+    >
+      <Text>
+        Star Wars
+      </Text>
+    </View>
+  </View>
+</View>
+`;
