@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Dimensions, Image, ScrollView, StyleSheet, View } from 'react-native';
 import Background from '../../components/Background';
 import DataField from '../../components/DataField';
@@ -6,8 +6,8 @@ import SWText from '../../components/SWText';
 import SWView from '../../components/SWView';
 import Movie from '../../models/Movie';
 import strings from '../../res/strings';
+import { dateFormat } from '../../utils/helper';
 import { moviePoster } from '../../utils/pictures';
-import {dateFormat} from "../../utils/helper";
 
 const styles = StyleSheet.create({
   container: { height: Dimensions.get('window').height - 100 },

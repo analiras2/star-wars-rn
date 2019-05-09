@@ -2,9 +2,9 @@ import {shallow} from 'enzyme';
 import React from 'react';
 import {render} from 'react-native-testing-library';
 import renderer from 'react-test-renderer';
-import {Text} from "react-native";
-import Background from "../Background";
-import SWView from "../SWView";
+import {Text} from 'react-native';
+import Background from '../Background';
+import SWView from '../SWView';
 
 const basicView = () => (
     <Background>
