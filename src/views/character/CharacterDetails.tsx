@@ -13,7 +13,13 @@ import MovieListItem from './movieListItem';
 
 const styles = StyleSheet.create({
   container: { height: Dimensions.get('window').height - 100 },
-  img: { height: 187 },
+  img: {
+    flexGrow: 1,
+    height: 187,
+    width: undefined,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   divider: { backgroundColor: colors.accent, height: 1 },
   divider2: { backgroundColor: colors.accent, height: 1, marginTop: 4 },
 });

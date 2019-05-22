@@ -58,7 +58,7 @@ export default function main(props: Props) {
         barStyle="light-content"
       />
       <Image
-        style={{ width: 300, height: 200, marginTop: 38, marginBottom: 88 }}
+        style={{ width: 300, height: 200, marginTop: 38, marginBottom: 44 }}
         source={require('../res/img/logo.png')}
       />
       <SWLoading title={loadingMsg} />
