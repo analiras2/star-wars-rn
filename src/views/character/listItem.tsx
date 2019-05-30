@@ -33,6 +33,7 @@ export default (person: Person, navigation: any, numColumns: number) => {
       <Image
         style={styles(numColumns).avatar}
         source={avatar.uri ? avatar : require('../../res/img/placeholder.png')}
+        defaultSource={require('../../res/img/placeholder.png')}
       />
       <SWText key={person.id} title={person.name} top={4} bold />
     </TouchableOpacity>
