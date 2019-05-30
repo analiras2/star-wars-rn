@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SWText renders SWText correctly 1`] = `
+<Text
+  style={
+    Object {
+      "alignSelf": "auto",
+      "color": "#fff",
+      "flex": 0,
+      "fontFamily": "Exo-Regular",
+      "fontSize": 14,
+      "letterSpacing": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "textAlign": "auto",
+    }
+  }
+>
+  Star Wars App
+</Text>
+`;
