@@ -2,7 +2,31 @@
 
 Aplicativo de estudos projetado para Android e iOS utilizando o framework React-Native.
 
-## Começando
+## MVP
+
+✅ Layout: [Figma](https://www.figma.com/file/XLXG72uqtOftjT9T2kl6HVUi/Star-Wars-Challenge?node-id=0%3A1)
+
+✅ Projeto em TypeScript
+
+✅ O app deve realizar apenas uma requisição e os dados devem ser salvos localmente para uso.
+
+✅ Versão para Android
+
+✅ Testes nos componentes
+
+## Próximos Passos
+
+- [ ] Versão para IOS
+
+- [ ] Placeholder para os personagens separados por Dark e Light side
+
+- [ ] Placeholder para as capas dos filmes
+
+- [ ] Som nos botões
+
+- [ ] Quiz: Conhecimento sobre Star Wars
+
+# Começando
 
 As instruções a seguir te darão uma cópia do projeto funcionando em sua máquina local para fins de
 desenvolvimento e teste.
