@@ -16,15 +16,15 @@ Aplicativo de estudos projetado para Android e iOS utilizando o framework React-
 
 ## Próximos Passos
 
-[ ] Versão para IOS
+- [ ] Versão para IOS
 
-[ ] Placeholder para os personagens separados por Dark e Light side
+- [ ] Placeholder para os personagens separados por Dark e Light side
 
-[ ] Placeholder para as capas dos filmes
+- [ ] Placeholder para as capas dos filmes
 
-[ ] Som nos botões
+- [ ] Som nos botões
 
-[ ] Quiz: Conhecimento sobre Star Wars
+- [ ] Quiz: Conhecimento sobre Star Wars
 
 # Começando
 
